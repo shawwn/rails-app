@@ -6,6 +6,7 @@
     "node": "7.8.0"
   },
   "scripts": {
+    "setup": "gem install bundle && bundle install --without production && bundle update",
     "deploy": "git push heroku master && heroku run rake db:migrate && heroku open"
   }
 }

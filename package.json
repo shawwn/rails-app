@@ -8,7 +8,7 @@
   "scripts": {
     "setup": "gem install bundle && bundle install --without production && bundle update",
     "test": "rails test && heroku run rails test",
-    "deploy": "git push heroku master && heroku run rake db:migrate && heroku open",
+    "deploy": "git push heroku master && heroku run rake db:migrate && heroku run rails test && heroku open",
     "logs": "heroku logs"
   }
 }

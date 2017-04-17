@@ -7,8 +7,12 @@
   },
   "scripts": {
     "setup": "gem install bundle && bundle install --without production && bundle update",
-    "test": "rails test && heroku run rails test",
-    "deploy": "git push heroku master && heroku run rails db:migrate && heroku run rails test && heroku open",
+    "test": "rails test",
+    "db:reset": "heroku pg:reset DATABASE",
+    "db:version": "heroku run rails db:version",
+    "db:rollback": "heroku run rails db:rollback",
+    "db:migrate": "heroku run rails db:migrate",
+    "deploy": "git push heroku master && heroku run rails db:migrate && heroku open",
     "logs": "heroku logs"
   }
 }

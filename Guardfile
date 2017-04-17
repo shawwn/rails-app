@@ -21,7 +21,8 @@ guard :minitest, spring: "bin/rails test" do
   watch(%r{^lib/(.*/)?([^/]+)\.rb$})     { |m| "test/#{m[1]}test_#{m[2]}.rb" }
   watch(%r{^test/test_helper\.rb$})      { 'test' }
   watch('config/routes.rb')              { 'test' }
-  watch(%r{^app/(.*/)?([^/]+)\.[e]?rb$}) { 'test' }
+  watch(%r{^app/(.*/)?([^/]+)\.*$}) { 'test' }
+  watch(%r{^test/(.*/)?([^/]+)\.*$}) { 'test' }
 
   # with Minitest::Spec
   # watch(%r{^spec/(.*)_spec\.rb$})

@@ -8,6 +8,7 @@
   "scripts": {
     "setup": "gem install bundle && bundle install --without production && bundle update",
     "test": "rails test",
+    "guard": "bundle exec guard",
     "db:reset": "heroku pg:reset DATABASE",
     "db:version": "heroku run rails db:version",
     "db:rollback": "heroku run rails db:rollback",

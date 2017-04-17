@@ -4,5 +4,8 @@
   "description": "Rails boilerplate application",
   "engines": {
     "node": "7.8.0"
+  },
+  "scripts": {
+    "deploy": "git push heroku master && heroku run rake db:migrate"
   }
 }

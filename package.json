@@ -1,0 +1,8 @@
+{
+  "name": "rails-app",
+  "version": "1.0.0",
+  "description": "Rails boilerplate application",
+  "engines": {
+    "node": "7.8.x"
+  }
+}
